@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', 'Be Vietnam Pro', sans-serif;
+  }
+
+  body {
+    background-color: #FDF5E6;
+    color: #2C2C2C;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #C92A2A;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom editorial styles with full Vietnamese support */
+.font-editorial-heading {
+  font-family: 'Oswald', 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.font-editorial-sub {
+  font-family: 'Barlow Condensed', 'Oswald', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-handwritten {
+  font-family: 'Playpen Sans', cursive, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4ECE1;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9CBB7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C92A2A;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Subtle image zoom on hover */
+.group:hover .img-hover-zoom {
+  transform: scale(1.05);
+}
+
+/* Subtle card lift */
+.card-hover-lift {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(44, 44, 44, 0.09), 0 10px 10px rgba(44, 44, 44, 0.04);
+}
