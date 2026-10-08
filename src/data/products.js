@@ -96,7 +96,7 @@ Một chút cay, một chút ngọt, một chút nồng nàn — vừa đủ đ�
   {
     id: "truffle-mushroom",
     name: "Truffle Mushroom Burger",
-    tagline: "Thanh tao, tinh tế, đậm vị nấm.",
+    tagline: "Có những điều không cần quá ồn ào",
     category: "Phô mai",
     isSignature: false,
     image: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=1200&auto=format&fit=crop",
@@ -104,8 +104,13 @@ Một chút cay, một chút ngọt, một chút nồng nàn — vừa đủ đ�
       "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop",
     ],
-    description: "Thanh tao, tinh tế, đậm vị nấm. Sự kết hợp giữa nấm xào bơ thảo mộc và hương thơm truffle quý phái trên lớp phô mai béo ngậy.",
-    longDescription: "Hương thơm quý phái từ nấm Truffle đen hòa cùng vị ngọt tự nhiên của nấm nâu áp chảo bơ tỏi. Một sự lựa chọn mang phong thái ẩm thực Âu thanh lịch, êm ái và sâu lắng.",
+    description: `Có những tình cảm không bắt đầu bằng những điều quá lớn, mà chỉ là những buổi tối ngồi cạnh nhau và kể vài chuyện chẳng đầu chẳng cuối.
+Nhìn chiếc Burger này, mình lại nghĩ đến những mối quan hệ càng chậm rãi càng dễ khiến người ta nhớ lâu.
+Vị nấm thơm, phô mai béo và chút đậm đà hòa vào nhau, giống như hai người khác nhau nhưng vẫn tìm được cách để ở cạnh nhau.
+Tuổi trẻ có thể có những lần gặp gỡ rất ngắn, nhưng cảm xúc để lại thì đôi khi ở lại rất lâu.
+Có lẽ điều đáng quý nhất không phải là một câu chuyện tình hoàn hảo, mà là có một người cùng mình tận hưởng những khoảnh khắc rất bình thường.
+Giống như một chiếc Burger ngon, có những điều càng nhẹ nhàng lại càng khiến người ta muốn thưởng thức thêm một lần nữa`,
+    longDescription: "",
     ingredients: [
       { name: "Sốt Truffle đen", desc: "Hương thơm sang trọng quyến rũ", icon: "Sparkles" },
       { name: "Nấm mỡ xào bơ tỏi", desc: "Giữ trọn độ ngọt mọng tự nhiên", icon: "Leaf" },
