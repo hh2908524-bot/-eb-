@@ -34,7 +34,7 @@ Có lẽ tuổi trẻ chính là những ngày bận rộn nhưng vẫn tìm đ�
   {
     id: "melted-cheese",
     name: "HU Melted Cheese",
-    tagline: "Phô mai tan chảy, đậm vị, nức nở.",
+    tagline: "Một chút béo ngậy sau một ngày dài",
     category: "Phô mai",
     isSignature: true,
     image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=1200&auto=format&fit=crop",
@@ -43,8 +43,13 @@ Có lẽ tuổi trẻ chính là những ngày bận rộn nhưng vẫn tìm đ�
       "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=600&auto=format&fit=crop",
     ],
-    description: "Phô mai tan chảy, đậm vị, nức nở. Sự ngập tràn của cheddar vàng óng bao phủ lấy từng thớ thịt smash thơm lừng.",
-    longDescription: "Tác phẩm dành cho những tâm hồn si mê độ ngậy béo. Từng lát Cheddar hảo hạng tan chảy chậm rãi dưới nắp chụp vỉ gang, hòa quyện với phần sốt kem bơ tỏi đặc chế tạo nên kết cấu mịn màng, phủ kín miếng bò nướng.",
+    description: `Tan học xong, mình lại về bếp và bắt đầu một buổi tối quen thuộc với những chiếc Burger.
+Có những hôm đứng bếp khá lâu, người mệt nhưng nhìn phô mai tan chảy trên chiếc Burger này lại thấy vui lạ.
+Mình thích khoảnh khắc mọi nguyên liệu được xếp lại với nhau và trở thành một món ăn hoàn chỉnh.
+Công việc có thể lặp lại mỗi ngày, nhưng mỗi ngày mình lại có thêm một câu chuyện nhỏ để nhớ.
+Có lẽ niềm vui tuổi trẻ đôi khi chỉ đơn giản là làm việc mình thích và cố gắng tốt hơn một chút mỗi ngày.
+Một chiếc Burger nóng hổi, một ngày dài đã qua, và mình lại có thêm một kỷ niệm để kể`,
+    longDescription: "",
     ingredients: [
       { name: "Phô mai Cheddar kép", desc: "Gấp đôi lớp cheese vàng óng", icon: "Layers" },
       { name: "Bò Smash mọng nước", desc: "Cháy cạnh giòn, mềm ngọt trong", icon: "Flame" },
