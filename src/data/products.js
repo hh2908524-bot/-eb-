@@ -65,7 +65,7 @@ Một chiếc Burger nóng hổi, một ngày dài đã qua, và mình lại có
   {
     id: "spicy-bbq",
     name: "Spicy BBQ Burger",
-    tagline: "Vị cay nồng, bùng nổ cảm xúc.",
+    tagline: "Nồng cháy như một chiếc Burger",
     category: "Bò Smash",
     isSignature: true,
     image: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=1200&auto=format&fit=crop",
@@ -74,8 +74,13 @@ Một chiếc Burger nóng hổi, một ngày dài đã qua, và mình lại có
       "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600&auto=format&fit=crop",
     ],
-    description: "Vị cay nồng, bùng nổ cảm xúc. Sốt BBQ xông khói kết hợp ớt nướng và hành tây caramel tạo nên trải nghiệm đa tầng.",
-    longDescription: "Một bản giao hưởng đầy nhiệt huyết. Sốt BBQ cay khói được ủ theo công thức riêng của HU, cân bằng hoàn hảo giữa vị ngọt của hành tây caramel hoá và vị cay nồng của hạt tiêu đen giã dập.",
+    description: `Có những chuyện tình bắt đầu rất nhẹ nhàng, nhưng càng đi cùng nhau lại càng trở nên nồng nhiệt.
+Giống như chiếc Burger này, từng lớp nguyên liệu tưởng đơn giản nhưng khi kết hợp lại tạo nên một hương vị rất riêng.
+Tuổi trẻ cũng vậy, có lúc ngọt ngào, có lúc cay một chút, nhưng chính những điều đó làm kỷ niệm trở nên đáng nhớ.
+Mình thích cách một chiếc Burger nóng hổi có thể khiến người ta vui lên, giống như một người đặc biệt có thể làm một ngày bình thường trở nên khác đi.
+Có lẽ tình yêu đẹp nhất không phải lúc nào cũng hoàn hảo, mà là khi cả hai cùng nhau tạo nên những khoảnh khắc đáng nhớ.
+Một chút cay, một chút ngọt, một chút nồng nàn — vừa đủ để người ta muốn nhớ mãi`,
+    longDescription: "",
     ingredients: [
       { name: "Sốt BBQ Khói thủ công", desc: "Hương gỗ sồi tự nhiên đậm đà", icon: "Flame" },
       { name: "Ớt Jalapeño nướng", desc: "Cay the kích thích vị giác", icon: "Sparkles" },
