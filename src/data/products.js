@@ -1,8 +1,8 @@
 export const products = [
   {
     id: "classic-hu",
-    name: "The Classic HU Burger",
-    tagline: "Đơn giản nhưng hoàn hảo, chuẩn vị HU.",
+    name: "SAU GIỜ HỌC, MÌNH LẠI VỀ VỚI GIAN BẾP",
+    tagline: "Đi học ban ngày, đứng bếp đến tối — và giữa những ngày bận rộn ấy, mình học được cách tìm niềm vui từ những điều rất nhỏ",
     category: "Bò Smash",
     isSignature: true,
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop",
@@ -12,8 +12,13 @@ export const products = [
       "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=600&auto=format&fit=crop",
     ],
-    description: "Với miếng thịt bò 100% được nướng trên vỉ nóng, phủ một lớp cheddar béo ngậy, rau tươi giòn và lớp vỏ bánh nướng bơ thơm lừng. The Classic HU Burger là sự kết hợp hoàn hảo giữa truyền thống và đậm chất.",
-    longDescription: "Một chiếc burger định hình phong cách HU Culinary ngay từ những ngày đầu. Chúng tôi không sử dụng bất kỳ chất bảo quản hay phụ gia tăng hương vị nào; mọi cảm xúc đến từ kỹ thuật ép smash nhiệt cao chuẩn xác, giữ trọn vẹn nước thịt bò tự nhiên hòa cùng độ béo ngậy của cheddar cao cấp.",
+    description: `Mỗi ngày đi học về, mình lại thay đồ rồi bắt đầu ca làm trong bếp đến tận tối.
+Có hôm khá mệt vì khách đông, bếp nóng và phải đứng suốt nhiều giờ.
+Nhưng cũng có những lúc rất vui, như khi hoàn thành một chiếc Burger thật đẹp hay nghe một lời cảm ơn từ khách.
+Nhìn một chiếc Burger đơn giản vậy thôi, nhưng phía sau nó là rất nhiều công sức và những câu chuyện nhỏ.
+Mỗi ngày đi học, đi làm rồi trở về nhà, mình lại học thêm được một điều mới.
+Có lẽ tuổi trẻ chính là những ngày bận rộn nhưng vẫn tìm được niềm vui trong những điều giản dị như thế`,
+    longDescription: "",
     ingredients: [
       { name: "Thịt bò 100%", desc: "Tươi ngon, thượng hạng", icon: "Flame" },
       { name: "Phô mai Cheddar", desc: "Béo ngậy, tan chảy", icon: "Layers" },

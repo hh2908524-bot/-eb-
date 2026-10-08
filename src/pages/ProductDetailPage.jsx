@@ -95,7 +95,7 @@ export default function ProductDetailPage() {
             </p>
 
             {/* Large title */}
-            <h1 className="font-heading text-4xl sm:text-6xl tracking-wide uppercase text-charcoal leading-none">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl tracking-wide uppercase text-charcoal leading-tight">
               {product.name}
             </h1>
 
@@ -105,13 +105,15 @@ export default function ProductDetailPage() {
             </p>
 
             {/* Detailed Description */}
-            <p className="mt-4 text-sm sm:text-base text-charcoal/80 leading-relaxed font-normal">
+            <p className="mt-4 text-sm sm:text-base text-charcoal/80 leading-relaxed font-normal whitespace-pre-line">
               {product.description}
             </p>
 
-            <p className="mt-2 text-sm text-charcoal/70 leading-relaxed">
-              {product.longDescription}
-            </p>
+            {product.longDescription && (
+              <p className="mt-2 text-sm text-charcoal/70 leading-relaxed whitespace-pre-line">
+                {product.longDescription}
+              </p>
+            )}
           </div>
 
           {/* Section: THÀNH PHẦN CỐT LÕI */}
