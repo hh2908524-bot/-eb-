@@ -156,7 +156,7 @@ Burger chỉ là món ăn, còn những tiếng cười bên cạnh nó mới l�
   {
     id: "double-beef",
     name: "Double Beef Burger",
-    tagline: "Hai lớp thịt, gấp đôi trải nghiệm.",
+    tagline: "Gấp đôi một chút, như những ngày tuổi trẻ",
     category: "Bò Smash",
     isSignature: false,
     image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=1200&auto=format&fit=crop",
@@ -164,8 +164,13 @@ Burger chỉ là món ăn, còn những tiếng cười bên cạnh nó mới l�
       "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600&auto=format&fit=crop",
     ],
-    description: "Hai lớp thịt, gấp đôi trải nghiệm. Nhân đôi niềm vui với hai tầng bò smash cháy cạnh xen kẽ hai lớp phô mai tan chảy.",
-    longDescription: "Sự thăng hoa tột cùng của phong cách Smash Burger. Hai miếng patty ép chặt trên bề mặt vỉ gang siêu nóng, hai lớp cheddar tan chảy quyện chặt giữa từng tầng thịt, tạo nên độ đầy đặn và thỏa mãn tuyệt đối.",
+    description: `Chiếc Double Beef này làm mình nghĩ đến những ngày mình phải “gấp đôi” mọi thứ: vừa đi học, vừa đi làm đến tối.
+Tan học là lại vội vàng vào bếp, có hôm mệt nhưng nhìn một chiếc Burger hoàn chỉnh lại thấy công sức của mình cũng đáng.
+Hai lớp thịt trong chiếc bánh giống như hai phần cuộc sống của mình, mỗi phần đều có những áp lực riêng nhưng cùng tạo nên một ngày trọn vẹn.
+Có những hôm chẳng còn nhiều năng lượng, chỉ mong hết ca để được về nghỉ.
+Nhưng rồi ngày mai lại tiếp tục, vì mình biết từng ngày như vậy đều đang giúp mình trưởng thành hơn một chút.
+Tuổi trẻ đôi khi là thế: bận rộn gấp đôi, mệt một chút, nhưng những kỷ niệm nhận lại cũng nhiều hơn`,
+    longDescription: "",
     ingredients: [
       { name: "2 x Bò Smash thượng hạng", desc: "Gấp đôi độ đậm đà và giòn cạnh", icon: "Flame" },
       { name: "2 x Cheddar tan chảy", desc: "Bao phủ trọn vẹn cả hai lớp thịt", icon: "Layers" },
