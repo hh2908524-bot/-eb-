@@ -13,7 +13,7 @@ export const galleryImages = [
     title: "Kỹ thuật Smash & Vệt lửa nóng hổi",
     category: "Bếp Lửa",
     aspect: "wide", // wide card
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/gallery_flame_grill.jpg",
     caption: "Khoảnh khắc ngọn lửa bùng lên trên vỉ nướng, tạo nên lớp vỏ caramalized thơm phức.",
     tag: "Craft"
   },
