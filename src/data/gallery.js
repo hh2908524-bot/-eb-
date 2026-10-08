@@ -22,7 +22,7 @@ export const galleryImages = [
     title: "Khoai tây chiên giòn tay & Sốt thủ công",
     category: "Nguyên Liệu",
     aspect: "square",
-    image: "https://images.unsplash.com/photo-1576107232684-1279f3908594?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/gallery_french_fries.jpg",
     caption: "Khoai tây cắt lát dày chiên 2 lần giòn rụm bên ngoài, bùi dẻo bên trong.",
     tag: "Sides"
   },
