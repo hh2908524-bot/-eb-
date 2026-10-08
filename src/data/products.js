@@ -1,8 +1,8 @@
 export const products = [
   {
     id: "classic-hu",
-    name: "SAU GIỜ HỌC, MÌNH LẠI VỀ VỚI GIAN BẾP",
-    tagline: "Đi học ban ngày, đứng bếp đến tối — và giữa những ngày bận rộn ấy, mình học được cách tìm niềm vui từ những điều rất nhỏ",
+    name: "The Classic HU Burger",
+    tagline: "Sau giờ học, mình lại về với gian bếp",
     category: "Bò Smash",
     isSignature: true,
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop",
