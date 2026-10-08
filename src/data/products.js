@@ -126,16 +126,21 @@ Giống như một chiếc Burger ngon, có những điều càng nhẹ nhàng l
   {
     id: "crispy-chicken",
     name: "Crispy Chicken Burger",
-    tagline: "Gà giòn rụm, tươi mát, đầy năng lượng.",
+    tagline: "Tan học rồi, đi ăn thôi!",
     category: "Gà giòn",
     isSignature: false,
-    image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/chicken_burger_assembled.png",
     thumbnails: [
-      "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop",
+      "/images/chicken_burger_assembled.png",
+      "/images/chicken_burger_exploded.png",
     ],
-    description: "Gà giòn rụm, tươi mát, đầy năng lượng. Má đùi gà tẩm ướp thảo mộc chiên vàng giòn rụm, ăn cùng sốt mè cay mát lạnh.",
-    longDescription: "Phần má đùi gà tươi ngon được tẩm ướp cùng sữa chua và gia vị thảo mộc suốt 12 tiếng. Lớp vỏ bột ngoài giòn rụm như tan ra, giữ lại từng thớ thịt gà ẩm mọng nước bên trong.",
+    description: `Tan học, có những hôm chẳng cần nghĩ xem sẽ đi đâu, chỉ cần rủ mấy đứa bạn đi ăn là cả nhóm đã vui rồi.
+Một chiếc Chicken Burger giòn nóng, thêm chút rau tươi, vậy mà ngồi với nhau có thể kể đủ thứ chuyện trên lớp.
+Có hôm cả bọn cười đến mức quên mất mình đang ăn gì, chỉ nhớ là hôm đó vui thật.
+Mình nghĩ tuổi trẻ đôi khi đơn giản như vậy, có bạn bè, có đồ ăn ngon và có những buổi chiều chẳng cần vội về.
+Sau này có thể mình sẽ quên hôm đó đã ăn chiếc Burger nào, nhưng chắc sẽ nhớ những người đã ngồi cùng mình.
+Burger chỉ là món ăn, còn những tiếng cười bên cạnh nó mới là thứ làm một ngày bình thường trở nên đáng nhớ`,
+    longDescription: "",
     ingredients: [
       { name: "Má đùi gà tẩm bột giòn", desc: "Vỏ ngoài giòn tan, thịt mọng nước", icon: "Flame" },
       { name: "Bắp cải tím ngâm giòn", desc: "Thanh mát, cân bằng vị giác", icon: "Leaf" },
