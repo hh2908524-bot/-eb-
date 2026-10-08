@@ -31,15 +31,15 @@ export default function AboutPage() {
           {/* Left Column: Natural Authentic Story */}
           <div className="lg:col-span-6 space-y-6 text-charcoal/85 text-base sm:text-lg leading-relaxed">
             <p className="font-normal first-letter:text-5xl first-letter:font-heading first-letter:text-chili first-letter:mr-3 first-letter:float-left first-letter:leading-none">
-              Tôi là một sinh viên chuyên ngành Marketing tại Học viện Công nghệ Bưu chính Viễn thông, với niềm đam mê mãnh liệt trong việc xây dựng thương hiệu F&amp;B thủ công.
+              Mình hiện là sinh viên năm 3, ban ngày đến giảng đường, tối lại dành thời gian làm việc trong gian bếp. Ban đầu mình đến với công việc bếp chỉ vì tò mò, nhưng càng làm mình càng thấy thích cảm giác tự tay tạo ra một món ăn hoàn chỉnh.
             </p>
 
             <p>
-              Hành trình của HU bắt đầu từ những ý tưởng nhỏ trên giảng đường, những buổi thảo luận say sưa, những bản kế hoạch marketing trên trang giấy, và rồi dấn thân vào một ước mơ lớn: tạo ra một không gian ẩm thực đề cao tính nghệ thuật và trải nghiệm người dùng.
+              Mình là người khá vui vẻ, cởi mở và thích nói chuyện, nên những giờ làm việc cùng mọi người thường có rất nhiều tiếng cười. Có những hôm khách đông đến mức chẳng kịp thở, nhưng chỉ cần cả bếp cùng động viên nhau là mọi thứ lại trở nên nhẹ nhàng hơn. Mình cũng khá thích đùa và đôi khi tự biến những chuyện mệt mỏi thành một câu chuyện để cùng mọi người cười.
             </p>
 
             <p>
-              Với HU, mỗi chiếc burger không chỉ đơn thuần là một món ăn nhanh gọn để lấp đầy dạ dày. Nó là câu chuyện về sự tỉ mỉ, là cảm xúc khi nhìn lớp phô mai tan chảy trên vỉ nóng, và là sự kết nối chân thành giữa những con người cùng trân quý hương vị nguyên bản.
+              Có lẽ vì thế mà mình luôn muốn những điều mình làm ra, dù là một chiếc Burger hay một câu chuyện nhỏ, đều mang theo một chút năng lượng tích cực. Đây cũng chính là lý do mình tạo nên góc nhỏ này — để kể về Burger, công việc và những điều thú vị của tuổi trẻ.
             </p>
 
             {/* Handwritten note on left */}
