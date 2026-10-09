@@ -64,11 +64,11 @@ export const galleryImages = [
   },
   {
     id: "lookbook-8",
-    title: "Ghé HU — 123 Phố Ẩm Thực khi thành phố lên đèn",
+    title: "Ghé HU khi thành phố lên đèn",
     category: "Không Gian",
     aspect: "wide",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop",
-    caption: "Góc phố thân quen, hương thơm bơ nướng phảng phất mời gọi bước chân bạn ghé lại.",
+    image: "/images/gallery_storefront.jpg",
+    caption: "Góc phố thân quen, nơi hương thơm bơ nướng phảng phất mời gọi bạn ghé lại cùng giao lưu và trò chuyện về sở thích burger.",
     tag: "Storefront"
   }
 ];

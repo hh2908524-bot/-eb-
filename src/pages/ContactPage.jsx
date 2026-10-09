@@ -280,7 +280,7 @@ export default function ContactPage() {
           {/* Night Storefront Photo Card */}
           <div className="relative rounded-3xl overflow-hidden bg-charcoal shadow-2xl border-4 border-white group">
             <img
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
+              src="/images/gallery_storefront.jpg"
               alt="HU Culinary Storefront"
               className="w-full h-[320px] sm:h-[380px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
