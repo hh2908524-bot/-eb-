@@ -31,7 +31,7 @@ export const galleryImages = [
     title: "Không gian ấm cúng ánh đèn HU Culinary",
     category: "Không Gian",
     aspect: "tall",
-    image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/gallery_ambiance.jpg",
     caption: "Nơi ánh đèn vàng ấm áp kết nối những cuộc trò chuyện bất tận bên bữa ăn ngon.",
     tag: "Ambiance"
   },
