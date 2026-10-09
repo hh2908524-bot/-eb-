@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Mail, Phone, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { MapPin, Mail, Phone, Clock, Send, CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
 import { InstagramIcon, FacebookIcon, TikTokIcon } from '../components/SocialIcons';
 
 export default function ContactPage() {
@@ -9,18 +9,44 @@ export default function ContactPage() {
     message: '',
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
-    
-    // Simulate contact submission
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 5000);
+
+    setStatus('loading');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/hh2908524@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `[HU Culinary] Thông điệp mới từ ${formData.name}`,
+          _template: "table"
+        })
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && (data.success === "true" || data.success === true || response.status === 200)) {
+        setStatus('success');
+      } else {
+        throw new Error(data.message || 'Không thể gửi email lúc này.');
+      }
+    } catch (err) {
+      console.error("Form submit error:", err);
+      setStatus('error');
+      setErrorMessage(err.message || 'Có lỗi xảy ra khi kết nối máy chủ gửi thư.');
+    }
   };
 
   return (
@@ -153,25 +179,62 @@ export default function ContactPage() {
 
           {/* Simple Contact Form */}
           <div className="bg-[#FAF6EE] rounded-3xl p-8 border border-[#EFE5D5] shadow-soft">
-            <h3 className="font-heading text-2xl tracking-wide uppercase text-charcoal mb-1">
-              GỬI THÔNG ĐIỆP
-            </h3>
+            <div className="flex items-start justify-between gap-4 mb-1">
+              <h3 className="font-heading text-2xl tracking-wide uppercase text-charcoal">
+                GỬI THÔNG ĐIỆP
+              </h3>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-chili/10 text-chili text-[11px] font-bold uppercase tracking-wider">
+                <Mail className="w-3 h-3" />
+                <span>Trực tiếp tới Email</span>
+              </span>
+            </div>
             <p className="text-xs sm:text-sm text-charcoal/70 mb-6">
-              Bạn có câu hỏi, góp ý hay chỉ đơn giản muốn chia sẻ câu chuyện ẩm thực cùng HU?
+              Mọi thông điệp của bạn sẽ được chuyển tiếp trực tiếp đến hộp thư cá nhân <strong className="text-chili font-semibold">hh2908524@gmail.com</strong>.
             </p>
 
-            {submitted ? (
-              <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-start gap-3 animate-in zoom-in-95 duration-200">
-                <CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-bold text-base">Cảm ơn thông điệp từ bạn!</h4>
-                  <p className="text-sm mt-1 text-emerald-700">
-                    Căn bếp HU đã nhận được lời nhắn và sẽ phản hồi qua email trong thời gian sớm nhất.
-                  </p>
+            {status === 'success' ? (
+              <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 space-y-4 animate-in zoom-in-95 duration-200">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-bold text-base">Đã gửi thông điệp thành công!</h4>
+                    <p className="text-sm mt-1 text-emerald-700 leading-relaxed">
+                      Cảm ơn <strong>{formData.name}</strong>, lời nhắn của bạn đã được chuyển thẳng tới email cá nhân <strong className="text-emerald-900">hh2908524@gmail.com</strong>. Mình sẽ đọc và phản hồi tới email của bạn sớm nhất!
+                    </p>
+                  </div>
                 </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setStatus('idle');
+                    setFormData({ name: '', email: '', message: '' });
+                  }}
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-800 hover:text-emerald-950 underline pt-1"
+                >
+                  <span>Gửi thêm thông điệp khác</span>
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
+                {status === 'error' && (
+                  <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-in fade-in duration-200">
+                    <div className="flex items-start gap-2">
+                      <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-semibold">{errorMessage || 'Kết nối gửi tự động bị gián đoạn.'}</p>
+                        <p className="text-amber-800/80 text-xs mt-0.5">Bạn có thể bấm nút bên cạnh để gửi trực tiếp qua ứng dụng Email.</p>
+                      </div>
+                    </div>
+                    <a
+                      href={`mailto:hh2908524@gmail.com?subject=${encodeURIComponent(`[HU Culinary] Thông điệp từ ${formData.name || 'Khách hàng'}`)}&body=${encodeURIComponent(`Xin chào Hiếu,\n\nHọ và tên: ${formData.name}\nEmail: ${formData.email}\n\nLời nhắn:\n${formData.message}`)}`}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-chili text-white rounded-lg font-bold text-xs whitespace-nowrap hover:bg-chili-hover transition-colors shadow-sm shrink-0"
+                    >
+                      <Mail className="w-3.5 h-3.5" />
+                      <span>Mở Email gửi ngay</span>
+                    </a>
+                  </div>
+                )}
+
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-charcoal/70 mb-1.5">
                     Tên của bạn *
@@ -179,10 +242,11 @@ export default function ContactPage() {
                   <input
                     type="text"
                     required
+                    disabled={status === 'loading'}
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Nguyễn Văn A"
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-cream-300 text-charcoal placeholder:text-charcoal/40 text-sm focus:outline-none focus:border-chili focus:ring-1 focus:ring-chili transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-cream-300 text-charcoal placeholder:text-charcoal/40 text-sm focus:outline-none focus:border-chili focus:ring-1 focus:ring-chili transition-all disabled:opacity-60"
                   />
                 </div>
 
@@ -193,10 +257,11 @@ export default function ContactPage() {
                   <input
                     type="email"
                     required
+                    disabled={status === 'loading'}
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="yourname@gmail.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-cream-300 text-charcoal placeholder:text-charcoal/40 text-sm focus:outline-none focus:border-chili focus:ring-1 focus:ring-chili transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-cream-300 text-charcoal placeholder:text-charcoal/40 text-sm focus:outline-none focus:border-chili focus:ring-1 focus:ring-chili transition-all disabled:opacity-60"
                   />
                 </div>
 
@@ -207,20 +272,43 @@ export default function ContactPage() {
                   <textarea
                     rows={4}
                     required
+                    disabled={status === 'loading'}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Hãy viết điều bạn muốn chia sẻ với HU..."
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-cream-300 text-charcoal placeholder:text-charcoal/40 text-sm focus:outline-none focus:border-chili focus:ring-1 focus:ring-chili transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-cream-300 text-charcoal placeholder:text-charcoal/40 text-sm focus:outline-none focus:border-chili focus:ring-1 focus:ring-chili transition-all resize-none disabled:opacity-60"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-chili hover:bg-chili-hover text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lift"
+                  disabled={status === 'loading'}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-chili hover:bg-chili-hover disabled:opacity-70 text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lift"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>Gửi Thông Điệp</span>
+                  {status === 'loading' ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Đang gửi tới hh2908524@gmail.com...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      <span>Gửi Thông Điệp</span>
+                    </>
+                  )}
                 </button>
+
+                <div className="pt-2 text-center">
+                  <p className="text-xs text-charcoal/50">
+                    Hoặc gửi trực tiếp từ ứng dụng email:{' '}
+                    <a
+                      href="mailto:hh2908524@gmail.com"
+                      className="text-chili font-semibold hover:underline"
+                    >
+                      hh2908524@gmail.com
+                    </a>
+                  </p>
+                </div>
               </form>
             )}
           </div>
