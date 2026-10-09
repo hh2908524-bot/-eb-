@@ -159,10 +159,10 @@ Burger chỉ là món ăn, còn những tiếng cười bên cạnh nó mới l�
     tagline: "Gấp đôi một chút, như những ngày tuổi trẻ",
     category: "Bò Smash",
     isSignature: false,
-    image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/double_beef_assembled.jpg",
     thumbnails: [
-      "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600&auto=format&fit=crop",
+      "/images/double_beef_assembled.jpg",
+      "/images/double_beef_exploded.jpg",
     ],
     description: `Chiếc Double Beef này làm mình nghĩ đến những ngày mình phải “gấp đôi” mọi thứ: vừa đi học, vừa đi làm đến tối.
 Tan học là lại vội vàng vào bếp, có hôm mệt nhưng nhìn một chiếc Burger hoàn chỉnh lại thấy công sức của mình cũng đáng.
