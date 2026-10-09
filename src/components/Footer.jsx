@@ -65,44 +65,55 @@ export default function Footer() {
               Kết Nối Với HU
             </h4>
             <div className="space-y-2 text-sm text-cream-200/70">
-              <div className="flex items-center gap-2.5">
-                <MapPin className="w-4 h-4 text-chili shrink-0" />
-                <span>123 Phố Ẩm Thực, Cầu Giấy, HN</span>
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-chili shrink-0 mt-0.5" />
+                <a
+                  href="https://maps.app.goo.gl/BDywLHL2z1pWrmbn7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cheddar transition-colors"
+                >
+                  Toán Tư Duy Mathnasium Mỗ Lao, 16 P. Mộ Lao, xóm Lẻ, Hà Đông, Hà Nội
+                </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-chili shrink-0" />
-                <span>hello@huculinary.vn</span>
+                <a href="mailto:hh2908524@gmail.com" className="hover:text-cheddar transition-colors">
+                  hh2908524@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-chili shrink-0" />
-                <span>0900 000 000</span>
+                <a href="tel:0862106026" className="hover:text-cheddar transition-colors">
+                  0862106026
+                </a>
               </div>
             </div>
 
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/hieuhoang1421/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/5 hover:bg-chili hover:text-white flex items-center justify-center transition-all text-cream-200/80"
                 aria-label="Instagram"
               >
                 <InstagramIcon className="w-4 h-4" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/hieu.hoang.933445?locale=vi_VN"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/5 hover:bg-chili hover:text-white flex items-center justify-center transition-all text-cream-200/80"
                 aria-label="Facebook"
               >
                 <FacebookIcon className="w-4 h-4" />
               </a>
               <a
-                href="https://tiktok.com"
+                href="https://www.tiktok.com/@hhhhh.352"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/5 hover:bg-chili hover:text-white flex items-center justify-center transition-all text-cream-200/80"
                 aria-label="TikTok"
               >

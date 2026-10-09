@@ -72,7 +72,14 @@ export default function ContactPage() {
                   <MapPin className="w-5 h-5 text-chili shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs uppercase font-bold text-white/50 block">Địa chỉ</span>
-                    <span className="text-cream-100 font-medium">123 Phố Ẩm Thực, Cầu Giấy, Hà Nội</span>
+                    <a
+                      href="https://maps.app.goo.gl/BDywLHL2z1pWrmbn7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-cream-100 hover:text-cheddar transition-colors font-medium leading-relaxed"
+                    >
+                      Toán Tư Duy Mathnasium Mỗ Lao, 16 P. Mộ Lao, xóm Lẻ, Hà Đông, Hà Nội, Việt Nam
+                    </a>
                   </div>
                 </div>
 
@@ -80,8 +87,8 @@ export default function ContactPage() {
                   <Mail className="w-5 h-5 text-chili shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs uppercase font-bold text-white/50 block">Email</span>
-                    <a href="mailto:hello@huculinary.vn" className="text-cream-100 hover:text-cheddar transition-colors font-medium">
-                      hello@huculinary.vn
+                    <a href="mailto:hh2908524@gmail.com" className="text-cream-100 hover:text-cheddar transition-colors font-medium">
+                      hh2908524@gmail.com
                     </a>
                   </div>
                 </div>
@@ -90,8 +97,8 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5 text-chili shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs uppercase font-bold text-white/50 block">Hotline</span>
-                    <a href="tel:0900000000" className="text-cream-100 hover:text-cheddar transition-colors font-medium">
-                      0900 000 000
+                    <a href="tel:0862106026" className="text-cream-100 hover:text-cheddar transition-colors font-medium">
+                      0862106026
                     </a>
                   </div>
                 </div>
@@ -112,27 +119,27 @@ export default function ContactPage() {
                 </p>
                 <div className="flex items-center gap-3">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/hieuhoang1421/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-chili text-white text-xs font-semibold transition-all"
                   >
                     <InstagramIcon className="w-4 h-4" />
                     <span>Instagram</span>
                   </a>
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/hieu.hoang.933445?locale=vi_VN"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-chili text-white text-xs font-semibold transition-all"
                   >
                     <FacebookIcon className="w-4 h-4" />
                     <span>Facebook</span>
                   </a>
                   <a
-                    href="https://tiktok.com"
+                    href="https://www.tiktok.com/@hhhhh.352"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-chili text-white text-xs font-semibold transition-all"
                   >
                     <TikTokIcon className="w-4 h-4" />
@@ -226,30 +233,35 @@ export default function ContactPage() {
           {/* Simulated Google Maps card */}
           <div className="rounded-3xl overflow-hidden border border-cream-300 bg-white shadow-soft">
             {/* Map Header */}
-            <div className="p-4 bg-cream-100 border-b border-cream-200 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-chili" />
-                <div>
+            <div className="p-4 bg-cream-100 border-b border-cream-200 flex items-center justify-between gap-4">
+              <div className="flex items-center gap-2 min-w-0">
+                <MapPin className="w-5 h-5 text-chili shrink-0" />
+                <div className="min-w-0">
                   <p className="text-xs font-bold text-charcoal uppercase tracking-wider">
-                    HU Culinary · Cầu Giấy
+                    HU Culinary · Hà Đông
                   </p>
-                  <p className="text-[11px] text-charcoal/60">
-                    123 Phố Ẩm Thực, Cầu Giấy, Hà Nội
+                  <p className="text-[11px] text-charcoal/70 line-clamp-1" title="Toán Tư Duy Mathnasium Mỗ Lao, 16 P. Mộ Lao, xóm Lẻ, Hà Đông, Hà Nội, Việt Nam">
+                    Toán Tư Duy Mathnasium Mỗ Lao, 16 P. Mộ Lao, xóm Lẻ, Hà Đông, Hà Nội, Việt Nam
                   </p>
                 </div>
               </div>
               <a
-                href="https://maps.google.com"
+                href="https://maps.app.goo.gl/BDywLHL2z1pWrmbn7"
                 target="_blank"
                 rel="noreferrer"
-                className="text-xs text-chili font-semibold hover:underline"
+                className="text-xs text-chili font-semibold hover:underline whitespace-nowrap shrink-0"
               >
                 Xem bản đồ lớn hơn
               </a>
             </div>
 
             {/* Simulated Map Visual */}
-            <div className="relative h-64 bg-[#E8EDE0] overflow-hidden flex items-center justify-center">
+            <a
+              href="https://maps.app.goo.gl/BDywLHL2z1pWrmbn7"
+              target="_blank"
+              rel="noreferrer"
+              className="relative h-64 bg-[#E8EDE0] overflow-hidden flex items-center justify-center block group cursor-pointer"
+            >
               {/* Map vector grid lines */}
               <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
                 backgroundImage: `linear-gradient(#4A5568 1px, transparent 1px), linear-gradient(90deg, #4A5568 1px, transparent 1px)`,
@@ -261,20 +273,20 @@ export default function ContactPage() {
               <div className="absolute h-full w-8 bg-white/90 left-1/2 -translate-x-1/2 rotate-[25deg] shadow-sm" />
 
               {/* Custom Pin */}
-              <div className="relative z-10 flex flex-col items-center animate-bounce duration-1000">
+              <div className="relative z-10 flex flex-col items-center group-hover:scale-110 transition-transform duration-300">
                 <div className="bg-chili text-white font-bold text-xs px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 border-2 border-white">
                   <span className="w-2 h-2 rounded-full bg-cheddar" />
-                  <span>HU Culinary</span>
+                  <span>HU Culinary · Mỗ Lao</span>
                 </div>
                 <div className="w-3 h-3 bg-chili rotate-45 -mt-1.5 border-r border-b border-white" />
               </div>
 
-              {/* Zoom controls simulation */}
-              <div className="absolute bottom-3 right-3 flex flex-col rounded-lg bg-white shadow-md border border-cream-300 overflow-hidden text-xs font-bold text-charcoal">
-                <button className="px-2.5 py-1 hover:bg-cream-200 border-b border-cream-200">+</button>
-                <button className="px-2.5 py-1 hover:bg-cream-200">-</button>
+              {/* Google Maps link badge */}
+              <div className="absolute bottom-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/95 shadow-md border border-cream-300 text-xs font-semibold text-charcoal group-hover:bg-chili group-hover:text-white transition-colors">
+                <MapPin className="w-3.5 h-3.5 text-chili group-hover:text-white" />
+                <span>Mở trong Google Maps</span>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Night Storefront Photo Card */}

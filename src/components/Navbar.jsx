@@ -128,8 +128,8 @@ export default function Navbar({ onOpenSearch }) {
             {/* Bottom info in mobile drawer */}
             <div className="pt-6 border-t border-cream-200">
               <p className="font-handwritten text-xl text-chili font-bold">Good Food Good Mood</p>
-              <p className="text-xs text-charcoal/70 mt-1">123 Phố Ẩm Thực, Cầu Giấy, Hà Nội</p>
-              <p className="text-xs text-charcoal/60 mt-0.5">Hotline: 0900 000 000</p>
+              <p className="text-xs text-charcoal/70 mt-1">Toán Tư Duy Mathnasium Mỗ Lao, 16 P. Mộ Lao, xóm Lẻ, Hà Đông, Hà Nội</p>
+              <p className="text-xs text-charcoal/60 mt-0.5">Hotline: 0862106026</p>
             </div>
           </div>
         </div>
