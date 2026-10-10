@@ -62,7 +62,7 @@ export default function AboutPage() {
             {/* The Founder Image Card (Entire Person Visible from Head to Shoes) */}
             <div className="relative rounded-3xl overflow-hidden bg-white shadow-2xl border-4 border-white group">
               <img
-                src="/images/founder.jpg"
+                src="./images/founder.jpg"
                 alt="HU Founder - Toàn bộ người trong ảnh"
                 className="w-full h-auto block object-contain transition-transform duration-700 ease-out group-hover:scale-[1.01]"
               />

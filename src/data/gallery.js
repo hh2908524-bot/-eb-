@@ -13,7 +13,7 @@ export const galleryImages = [
     title: "Kỹ thuật Smash & Vệt lửa nóng hổi",
     category: "Bếp Lửa",
     aspect: "wide", // wide card
-    image: "/images/gallery_flame_grill.jpg",
+    image: "./images/gallery_flame_grill.jpg",
     caption: "Khoảnh khắc ngọn lửa bùng lên trên vỉ nướng, tạo nên lớp vỏ caramalized thơm phức.",
     tag: "Craft"
   },
@@ -22,7 +22,7 @@ export const galleryImages = [
     title: "Khoai tây chiên giòn tay & Sốt thủ công",
     category: "Nguyên Liệu",
     aspect: "square",
-    image: "/images/gallery_french_fries.jpg",
+    image: "./images/gallery_french_fries.jpg",
     caption: "Khoai tây cắt lát dày chiên 2 lần giòn rụm bên ngoài, bùi dẻo bên trong.",
     tag: "Sides"
   },
@@ -31,7 +31,7 @@ export const galleryImages = [
     title: "Không gian ấm cúng ánh đèn HU Culinary",
     category: "Không Gian",
     aspect: "tall",
-    image: "/images/gallery_ambiance.jpg",
+    image: "./images/gallery_ambiance.jpg",
     caption: "Nơi ánh đèn vàng ấm áp kết nối những cuộc trò chuyện bất tận bên bữa ăn ngon.",
     tag: "Ambiance"
   },
@@ -67,7 +67,7 @@ export const galleryImages = [
     title: "Ghé HU khi thành phố lên đèn",
     category: "Không Gian",
     aspect: "wide",
-    image: "/images/gallery_storefront.jpg",
+    image: "./images/gallery_storefront.jpg",
     caption: "Góc phố thân quen, nơi hương thơm bơ nướng phảng phất mời gọi bạn ghé lại cùng giao lưu và trò chuyện về sở thích burger.",
     tag: "Storefront"
   }

@@ -6,7 +6,7 @@ export const products = [
     category: "Bò Smash",
     isSignature: true,
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop",
-    fallbackImage: "/images/mockup_hero_burger.png",
+    fallbackImage: "./images/mockup_hero_burger.png",
     thumbnails: [
       "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600&auto=format&fit=crop",
@@ -129,10 +129,10 @@ Giống như một chiếc Burger ngon, có những điều càng nhẹ nhàng l
     tagline: "Tan học rồi, đi ăn thôi!",
     category: "Gà giòn",
     isSignature: false,
-    image: "/images/chicken_burger_assembled.png",
+    image: "./images/chicken_burger_assembled.png",
     thumbnails: [
-      "/images/chicken_burger_assembled.png",
-      "/images/chicken_burger_exploded.png",
+      "./images/chicken_burger_assembled.png",
+      "./images/chicken_burger_exploded.png",
     ],
     description: `Tan học, có những hôm chẳng cần nghĩ xem sẽ đi đâu, chỉ cần rủ mấy đứa bạn đi ăn là cả nhóm đã vui rồi.
 Một chiếc Chicken Burger giòn nóng, thêm chút rau tươi, vậy mà ngồi với nhau có thể kể đủ thứ chuyện trên lớp.
@@ -159,10 +159,10 @@ Burger chỉ là món ăn, còn những tiếng cười bên cạnh nó mới l�
     tagline: "Gấp đôi một chút, như những ngày tuổi trẻ",
     category: "Bò Smash",
     isSignature: false,
-    image: "/images/double_beef_assembled.jpg",
+    image: "./images/double_beef_assembled.jpg",
     thumbnails: [
-      "/images/double_beef_assembled.jpg",
-      "/images/double_beef_exploded.jpg",
+      "./images/double_beef_assembled.jpg",
+      "./images/double_beef_exploded.jpg",
     ],
     description: `Chiếc Double Beef này làm mình nghĩ đến những ngày mình phải “gấp đôi” mọi thứ: vừa đi học, vừa đi làm đến tối.
 Tan học là lại vội vàng vào bếp, có hôm mệt nhưng nhìn một chiếc Burger hoàn chỉnh lại thấy công sức của mình cũng đáng.

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Mail, Phone, Clock, Send, CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
+import { MapPin, Mail, Phone, Clock, Send, CheckCircle2, Loader2 } from 'lucide-react';
 import { InstagramIcon, FacebookIcon, TikTokIcon } from '../components/SocialIcons';
 
 export default function ContactPage() {
@@ -9,44 +9,14 @@ export default function ContactPage() {
     message: '',
   });
 
-  const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
-  const [errorMessage, setErrorMessage] = useState('');
+  const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success'
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     if (!formData.name || !formData.email || !formData.message) return;
-
     setStatus('loading');
-    setErrorMessage('');
-
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/hh2908524@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          _subject: `[HU Culinary] Thông điệp mới từ ${formData.name}`,
-          _template: "table"
-        })
-      });
-
-      const data = await response.json().catch(() => ({}));
-
-      if (response.ok && (data.success === "true" || data.success === true || response.status === 200)) {
-        setStatus('success');
-      } else {
-        throw new Error(data.message || 'Không thể gửi email lúc này.');
-      }
-    } catch (err) {
-      console.error("Form submit error:", err);
-      setStatus('error');
-      setErrorMessage(err.message || 'Có lỗi xảy ra khi kết nối máy chủ gửi thư.');
-    }
+    setTimeout(() => {
+      setStatus('success');
+    }, 1200);
   };
 
   return (
@@ -192,6 +162,14 @@ export default function ContactPage() {
               Mọi thông điệp của bạn sẽ được chuyển tiếp trực tiếp đến hộp thư cá nhân <strong className="text-chili font-semibold">hh2908524@gmail.com</strong>.
             </p>
 
+            {/* Hidden iframe to receive FormSubmit response silently without redirect or CORS issues */}
+            <iframe
+              name="formsubmit_hidden_iframe"
+              id="formsubmit_hidden_iframe"
+              title="FormSubmit Response"
+              style={{ display: 'none', width: 0, height: 0, border: 0 }}
+            />
+
             {status === 'success' ? (
               <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 space-y-4 animate-in zoom-in-95 duration-200">
                 <div className="flex items-start gap-3">
@@ -215,25 +193,17 @@ export default function ContactPage() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                {status === 'error' && (
-                  <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-in fade-in duration-200">
-                    <div className="flex items-start gap-2">
-                      <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-semibold">{errorMessage || 'Kết nối gửi tự động bị gián đoạn.'}</p>
-                        <p className="text-amber-800/80 text-xs mt-0.5">Bạn có thể bấm nút bên cạnh để gửi trực tiếp qua ứng dụng Email.</p>
-                      </div>
-                    </div>
-                    <a
-                      href={`mailto:hh2908524@gmail.com?subject=${encodeURIComponent(`[HU Culinary] Thông điệp từ ${formData.name || 'Khách hàng'}`)}&body=${encodeURIComponent(`Xin chào Hiếu,\n\nHọ và tên: ${formData.name}\nEmail: ${formData.email}\n\nLời nhắn:\n${formData.message}`)}`}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-chili text-white rounded-lg font-bold text-xs whitespace-nowrap hover:bg-chili-hover transition-colors shadow-sm shrink-0"
-                    >
-                      <Mail className="w-3.5 h-3.5" />
-                      <span>Mở Email gửi ngay</span>
-                    </a>
-                  </div>
-                )}
+              <form
+                action="https://formsubmit.co/hh2908524@gmail.com"
+                method="POST"
+                target="formsubmit_hidden_iframe"
+                onSubmit={handleSubmit}
+                className="space-y-4"
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_subject" value={`[HU Culinary] Thông điệp từ khách hàng: ${formData.name || 'Khách'}`} />
+                <input type="hidden" name="_autoresponse" value="Cảm ơn bạn đã gửi thông điệp tới HU Culinary! Mình đã nhận được lời nhắn và sẽ phản hồi sớm nhất." />
 
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-charcoal/70 mb-1.5">
@@ -241,6 +211,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
+                    name="name"
                     required
                     disabled={status === 'loading'}
                     value={formData.name}
@@ -256,6 +227,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     required
                     disabled={status === 'loading'}
                     value={formData.email}
@@ -271,6 +243,7 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     rows={4}
+                    name="message"
                     required
                     disabled={status === 'loading'}
                     value={formData.message}
@@ -297,18 +270,6 @@ export default function ContactPage() {
                     </>
                   )}
                 </button>
-
-                <div className="pt-2 text-center">
-                  <p className="text-xs text-charcoal/50">
-                    Hoặc gửi trực tiếp từ ứng dụng email:{' '}
-                    <a
-                      href="mailto:hh2908524@gmail.com"
-                      className="text-chili font-semibold hover:underline"
-                    >
-                      hh2908524@gmail.com
-                    </a>
-                  </p>
-                </div>
               </form>
             )}
           </div>
